@@ -1,1 +1,2 @@
 変更
+git commit --amend
