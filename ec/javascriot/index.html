@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="granfa">
+        <div id="parent">
+            <div id="target">
+                自分
+            </div>
+        </div>
+    </div>
+    <div id="divList">
+        <div class="class1">aaa</div>
+        <div class="class2">aaa</div>
+        <div class="class3">aaa</div>
+    </div>
+    <script>
+        const target=document.getElementById('target');
+        const newDiv=document.createElement('div');
+        newDiv.id='test';
+        newDiv.classList.add('red');
+        newDiv.textContent='テスト';
+        target.parentNode.appendChild(newDiv);
+
+        const targetList=document.getElementById('divList').firstElementChild;
+        const teference=document.querySelector('.class2').nextElementSibling;
+        console.log(targetList);
+        console.log(teference);
+        const newElwment=document.createElement('div');
+        newElwment.classList.add('class4');
+        newElwment.textContent='追加分';
+        targetList.insertBefore(newElwment,teference);
+    </script>
+</body>
+</html>
