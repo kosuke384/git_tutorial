@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .red{
-            color: red;
-        }
-        .blue{
-            color: blue;
-        }
-    </style>
 </head>
 <body>
     <div id="test">
@@ -19,26 +11,12 @@
         <buttom id="target">押してね</buttom>
     </div>
     <script>
-        /*function change_color(){
-            const test=document.getElementById('test');
-            test.textContent='テスト';
-            test.classList.add('red');
-        }*/
-
-        /*document.getElementById('target').onclick = function(){
-            const test=document.getElementById('test');
-            test.textContent='テスト';
-            test.classList.add('red');
-        }*/
-
         const target = document.getElementById('target');
-
-        target.addEventListener('click',()=>{
+        target.addEventListener('click',(e)=>{
             const test=document.getElementById('test');
             test.textContent='テスト';
             test.classList.add('red');
         });
-
     </script>
 </body>
 </html>
