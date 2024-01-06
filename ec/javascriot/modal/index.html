@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/35d7773a7e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 
 </head>
 <body>
-    <i class="fa-solid fa-arrow-left"></i>
-    <script href="main.js"></script>
+    <div id="modal" class="modal">
+        <div class="modal__inner">
+            <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+            <img src="image001.jpg" alt="">
+        </div>
+        <div id="modal__background" class="modal__background"></div>
+    </div>
+
+    <button id="modal__show">画像を見る</button>
+    <script src="main.js"></script>
 </body>
 </html>
