@@ -1,0 +1,64 @@
+.carousel {
+  width: 840px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel__main {
+  width: 640px;
+  height: 400px;
+  margin: 0 auto;
+}
+.carousel__main > .active {
+  animation: fadeImg 0.8s;
+}
+.carousel__prev {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  cursor: pointer;
+  color: lightgray;
+}
+.carousel__prev:hover {
+  transition-duration: 0.2s;
+  transform: translateX(-10px);
+}
+.carousel__next {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  cursor: pointer;
+  color: lightgray;
+}
+.carousel__next:hover {
+  transition-duration: 0.2s;
+  transform: translateX(10px);
+}
+.carousel__thumbnails {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.carousel__thumbnails li {
+  cursor: pointer;
+  opacity: 0.4;
+}
+.carousel__thumbnails li:hover {
+  opacity: 1;
+}
+.carousel__thumbnails li.current {
+  opacity: 1;
+}
+.carousel__thumbnails img {
+  width: 80px;
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=app.css.map */
