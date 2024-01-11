@@ -4,6 +4,8 @@ defineProps({
         type: String,
     },
 });
+
+defineEmits(['update:modelValue']);
 </script>
 
 <template>
@@ -11,4 +13,5 @@ defineProps({
         <span v-if="value">{{ value }}</span>
         <span v-else><slot /></span>
     </label>
+    <input type="text" @input="$emit('update:modelValue',$event.target.value)">
 </template>

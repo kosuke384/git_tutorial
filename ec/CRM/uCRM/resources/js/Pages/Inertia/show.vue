@@ -1,9 +1,22 @@
 <script setup>
+import { Inertia } from '@inertiajs/inertia';
+
 defineProps({
-    id : String
+    id : String,
+    blog : Object
 })
+
+const deleteConfirm=id=>{
+    Inertia.delete(`/inertia/${id}`,{
+        onBefore:()=>confirm('本当に削除しますか')
+    })
+}
 </script>
 
 <template>
-    {{ id }}
+    {{ id }}<br>
+    {{ blog.id }}<br>
+    {{ blog.title }}<br>
+    {{ blog.content }}<br>
+    <button @click="deleteConfirm(blog.id)">削除</button>
 </template>
