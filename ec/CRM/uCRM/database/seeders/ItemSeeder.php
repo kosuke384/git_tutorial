@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 
 class ItemSeeder extends Seeder
@@ -14,22 +13,6 @@ class ItemSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('items')->insert([
-            [
-                'name'=>'カット',
-                'memo'=>'カットの詳細',
-                'price'=>'6000'
-            ],
-            [
-                'name'=>'カラー',
-                'memo'=>'カラーの詳細',
-                'price'=>'10000'
-            ],
-            [
-                'name'=>'パーマ',
-                'memo'=>'パーマの詳細',
-                'price'=>'12000'
-            ],
-        ]);
+
     }
 }
