@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InertiaTestController;
 use App\Http\Controllers\ItemController;
-
+use App\Http\Controllers\CustomerControllerController;
+use App\Models\Customer;
 use Inertia\Inertia;
 
 /*
@@ -28,6 +30,9 @@ Route::get('/component-test', function () {
 });
 
 Route::resource('items',ItemController::class)
+->middleware(['auth','verified']);
+
+Route::resource('customers',CustomerController::class)
 ->middleware(['auth','verified']);
 
 Route::get('/inertia/index',[InertiaTestController::class,'index'])->name('inertia.index');
